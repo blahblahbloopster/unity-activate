@@ -27,7 +27,7 @@ class ImageTag {
   }
 
   static get versionPattern() {
-    return /^20\d{2}\.\d\.\w{3,4}|3$/;
+    return /^(20|60)\d{2}\.\d\.\w{3,4}|3$/;
   }
 
   static get imageSuffixes() {

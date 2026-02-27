@@ -8,6 +8,7 @@ async function run() {
     const { dockerfile, workspace, actionFolder } = Action;
     const unityVersion = Input.unityVersion;
     const baseImage = new ImageTag(unityVersion);
+    baseImage.customImage = "ubuntu-6000.3.10f1-linux-il2cpp-3.2.1";
 
     // Build docker image
     const actionImage = await Docker.build({ path: actionFolder, dockerfile, baseImage });
